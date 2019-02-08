@@ -2,13 +2,27 @@ data class Change(
     val pennies: Int,
     val nickels: Int,
     val dimes: Int,
-    val quarters:Int
+    val quarters: Int
 )
 
 fun makeChange(changeToMake: Int): List<Change> {
-    return listOf<Change>(makeChangePennies(changeToMake))
+    return makeChangeAddNickels(changeToMake)
 }
 
-private fun makeChangePennies(changeToMake: Int) : Change {
-    return Change(changeToMake, 0, 0, 0)
+fun makeChangeAddNickels(changeToMake: Int): List<Change> {
+
+    val changeCombinations = mutableListOf<Change>()
+
+    val nickelValue = 5
+    val maxNickels = changeToMake / nickelValue;
+
+    for (i in 0..maxNickels){
+        changeCombinations.add(makeChangeAddPennies(i,changeToMake-i*nickelValue))
+    }
+
+    return changeCombinations
+}
+
+private fun makeChangeAddPennies(numberOfNickels: Int, changeToMake: Int): Change {
+    return Change(changeToMake, numberOfNickels, 0, 0)
 }

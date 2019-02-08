@@ -17,4 +17,21 @@ class ChangeTest {
 
     }
 
+    @Test
+    fun when6CentsTwoCombinations(){
+
+        //setup
+        val expected = listOf(
+            Change(6,0,0,0),
+            Change(1,1,0,0)
+        )
+
+        //act
+        val actual = makeChange(6)
+
+        //assert
+        assertThat(actual).isEqualTo(expected)
+    }
+
+
 }
