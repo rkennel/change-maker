@@ -13,11 +13,12 @@ fun makeChangeAddNickels(changeToMake: Int): List<Change> {
 
     val changeCombinations = mutableListOf<Change>()
 
-    val nickelValue = 5
-    val maxNickels = changeToMake / nickelValue;
+    val numberOfPenniesInANickel = 5
+    val maxNickels = changeToMake / numberOfPenniesInANickel;
 
     for (i in 0..maxNickels){
-        changeCombinations.add(makeChangeAddPennies(i,changeToMake-i*nickelValue))
+        val valueInNickles = i * numberOfPenniesInANickel
+        changeCombinations.add(makeChangeAddPennies(i,changeToMake- valueInNickles))
     }
 
     return changeCombinations
