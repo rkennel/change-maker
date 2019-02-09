@@ -5,11 +5,21 @@ data class Change(
     val quarters: Int
 )
 
+
+
 fun makeChange(changeToMake: Int): List<Change> {
-    return makeChangeAddQuarters(changeToMake)
+    return makeChangeAddQuarters(changeToMake, 0, 0, 0, 0)
 }
 
-private fun makeChangeAddQuarters(changeToMake: Int): List<Change> {
+
+
+private fun makeChangeAddQuarters(
+    changeToMake: Int,
+    numberOfQuarters: Int,
+    numberOfDimes: Int,
+    numberOfNickels: Int,
+    numberOfPennies: Int
+): List<Change> {
     val changeCombinations = mutableListOf<Change>()
 
     val numberOfPenniesInAQuarter = 25
@@ -17,13 +27,27 @@ private fun makeChangeAddQuarters(changeToMake: Int): List<Change> {
 
     for (i in 0..maxQuarters) {
         val valueInQuarters = i * numberOfPenniesInAQuarter
-        changeCombinations.addAll(makeChangeAddDimes(i, changeToMake - valueInQuarters))
+        changeCombinations.addAll(
+            makeChangeAddDimes(
+                changeToMake - valueInQuarters,
+                i,
+                numberOfDimes,
+                numberOfNickels,
+                numberOfPennies
+            )
+        )
     }
 
     return changeCombinations
 }
 
-private fun makeChangeAddDimes(numberOfQuarters:Int,changeToMake: Int): List<Change> {
+private fun makeChangeAddDimes(
+    changeToMake: Int,
+    numberOfQuarters: Int,
+    numberOfDimes: Int,
+    numberOfNickels: Int,
+    numberOfPennies: Int
+): List<Change> {
     val changeCombinations = mutableListOf<Change>()
 
     val numberOfPenniesInADime = 10
@@ -31,13 +55,27 @@ private fun makeChangeAddDimes(numberOfQuarters:Int,changeToMake: Int): List<Cha
 
     for (i in 0..maxDimes) {
         val valueInDimes = i * numberOfPenniesInADime
-        changeCombinations.addAll(makeChangeAddNickels(numberOfQuarters, i, changeToMake - valueInDimes))
+        changeCombinations.addAll(
+            makeChangeAddNickels(
+                changeToMake - valueInDimes,
+                numberOfQuarters,
+                i,
+                numberOfNickels,
+                numberOfPennies
+            )
+        )
     }
 
     return changeCombinations
 }
 
-private fun makeChangeAddNickels(numberOfQuarters: Int,numberOfDimes: Int, changeToMake: Int): List<Change> {
+private fun makeChangeAddNickels(
+    changeToMake: Int,
+    numberOfQuarters: Int,
+    numberOfDimes: Int,
+    numberOfNickels: Int,
+    numberOfPennies: Int
+): List<Change> {
 
     val changeCombinations = mutableListOf<Change>()
 
@@ -46,13 +84,27 @@ private fun makeChangeAddNickels(numberOfQuarters: Int,numberOfDimes: Int, chang
 
     for (i in 0..maxNickels) {
         val valueInNickles = i * numberOfPenniesInANickel
-        changeCombinations.addAll(makeChangeAddPennies(numberOfQuarters, numberOfDimes, i, changeToMake - valueInNickles))
+        changeCombinations.addAll(
+            makeChangeAddPennies(
+                changeToMake - valueInNickles,
+                numberOfQuarters,
+                numberOfDimes,
+                i,
+                numberOfPennies
+            )
+        )
     }
 
     return changeCombinations
 }
 
-private fun makeChangeAddPennies(numberOfQuarters: Int,numberOfDimes: Int, numberOfNickels: Int, changeToMake: Int): List<Change> {
+private fun makeChangeAddPennies(
+    changeToMake: Int,
+    numberOfQuarters: Int,
+    numberOfDimes: Int,
+    numberOfNickels: Int,
+    numberOfPennies: Int
+): List<Change> {
     return mutableListOf(Change(changeToMake, numberOfNickels, numberOfDimes, numberOfQuarters))
 }
 
