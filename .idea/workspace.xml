@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db3512c2-a3c9-43d8-a768-e49cf0913664" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Change.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Change.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/ChangeTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ChangeTest.kt" afterDir="false" />
     </list>
@@ -36,7 +37,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="6" />
-          <entry key="Kotlin" value="740" />
+          <entry key="Kotlin" value="971" />
         </counts>
       </usages-collector>
     </session>
@@ -48,8 +49,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/kotlin/ChangeTest.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+                <state relative-caret-position="705">
+                  <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
                   <folding>
                     <element signature="e#0#83#0" expanded="true" />
                   </folding>
@@ -64,8 +65,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/kotlin/Change.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+                <state relative-caret-position="630">
+                  <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -555,7 +556,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549669661733" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549671761189" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
@@ -653,6 +654,18 @@
     <history-entry file="ChangeTest - 2019.02.08 at 18h 43m 16s.xml">
       <configuration name="ChangeTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ChangeTest - 2019.02.08 at 18h 47m 43s.xml">
+      <configuration name="ChangeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChangeTest - 2019.02.08 at 18h 49m 39s.xml">
+      <configuration name="ChangeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChangeTest - 2019.02.08 at 19h 18m 25s.xml">
+      <configuration name="ChangeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChangeTest - 2019.02.08 at 19h 21m 38s.xml">
+      <configuration name="ChangeTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
@@ -702,8 +715,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/ChangeTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="705">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
           <folding>
             <element signature="e#0#83#0" expanded="true" />
           </folding>
@@ -712,8 +725,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Change.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+        <state relative-caret-position="630">
+          <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
         </state>
       </provider>
     </entry>

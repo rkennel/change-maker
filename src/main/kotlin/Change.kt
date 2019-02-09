@@ -6,10 +6,24 @@ data class Change(
 )
 
 fun makeChange(changeToMake: Int): List<Change> {
-    return makeChangeAddNickels(changeToMake)
+    return makeChangeAddDimes(changeToMake)
 }
 
-fun makeChangeAddNickels(changeToMake: Int): List<Change> {
+fun makeChangeAddDimes(changeToMake: Int): List<Change> {
+    val changeCombinations = mutableListOf<Change>()
+
+    val numberOfPenniesInADime = 10
+    val maxDimes = changeToMake / numberOfPenniesInADime;
+
+    for (i in 0..maxDimes){
+        val valueInDimes = i * numberOfPenniesInADime
+        changeCombinations.addAll(makeChangeAddNickels(i,changeToMake- valueInDimes))
+    }
+
+    return changeCombinations
+}
+
+private fun makeChangeAddNickels(numberOfDimes:Int,changeToMake: Int): List<Change> {
 
     val changeCombinations = mutableListOf<Change>()
 
@@ -18,12 +32,12 @@ fun makeChangeAddNickels(changeToMake: Int): List<Change> {
 
     for (i in 0..maxNickels){
         val valueInNickles = i * numberOfPenniesInANickel
-        changeCombinations.add(makeChangeAddPennies(i,changeToMake- valueInNickles))
+        changeCombinations.add(makeChangeAddPennies(numberOfDimes, i,changeToMake- valueInNickles))
     }
 
     return changeCombinations
 }
 
-private fun makeChangeAddPennies(numberOfNickels: Int, changeToMake: Int): Change {
-    return Change(changeToMake, numberOfNickels, 0, 0)
+private fun makeChangeAddPennies(numberOfDimes:Int, numberOfNickels: Int, changeToMake: Int): Change {
+    return Change(changeToMake, numberOfNickels, numberOfDimes, 0)
 }

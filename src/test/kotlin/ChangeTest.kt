@@ -33,5 +33,23 @@ class ChangeTest {
         assertThat(actual).isEqualTo(expected)
     }
 
+    @Test
+    fun when11CentsFourCombinations(){
+
+        //setup
+        val expected = listOf(
+            Change(11,0,0,0),
+            Change(6,1,0,0),
+            Change(1,2,0,0),
+            Change(1,0,1,0)
+        )
+
+        //act
+        val actual = makeChange(11)
+
+        //assert
+        assertThat(actual).isEqualTo(expected)
+    }
+
 
 }
