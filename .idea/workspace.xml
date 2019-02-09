@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db3512c2-a3c9-43d8-a768-e49cf0913664" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ChangeKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ChangeKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/ChangeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/ChangeTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Change.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Change.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/ChangeTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ChangeTest.kt" afterDir="false" />
     </list>
@@ -30,14 +35,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Groovy" value="1" />
+          <entry key="Groovy" value="2" />
           <entry key="Kotlin" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="6" />
-          <entry key="Kotlin" value="971" />
+          <entry key="Groovy" value="8" />
+          <entry key="Kotlin" value="1526" />
         </counts>
       </usages-collector>
     </session>
@@ -49,11 +54,20 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/kotlin/ChangeTest.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="705">
-                  <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+                <state relative-caret-position="709">
+                  <caret line="76" selection-start-line="76" selection-end-line="77" />
                   <folding>
                     <element signature="e#0#83#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/build.gradle">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="16" selection-start-line="16" selection-end-line="16" />
                 </state>
               </provider>
             </entry>
@@ -65,8 +79,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/kotlin/Change.kt">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+                <state relative-caret-position="855">
+                  <caret line="57" selection-start-line="57" selection-end-line="57" />
                 </state>
               </provider>
             </entry>
@@ -290,9 +304,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="7748342541000" />
+        <entry key="$PROJECT_DIR$" value="7748346695000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="2201344628" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="1234853124" />
         <entry key="$PROJECT_DIR$/gradle.properties" value="3650535818" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2007532874" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="983852389" />
@@ -453,9 +467,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/kotlin/Change.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/kotlin/ChangeTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/Change.kt" />
       </list>
     </option>
   </component>
@@ -556,7 +570,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549671761189" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549673357466" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
@@ -636,21 +650,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ChangeTest - 2019.02.08 at 18h 36m 53s.xml">
-      <configuration name="ChangeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChangeTest - 2019.02.08 at 18h 37m 24s.xml">
-      <configuration name="ChangeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChangeTest - 2019.02.08 at 18h 38m 52s.xml">
-      <configuration name="ChangeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChangeTest - 2019.02.08 at 18h 40m 32s.xml">
-      <configuration name="ChangeTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ChangeTest - 2019.02.08 at 18h 41m 09s.xml">
-      <configuration name="ChangeTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ChangeTest - 2019.02.08 at 18h 43m 16s.xml">
       <configuration name="ChangeTest" configurationId="JUnit" />
     </history-entry>
@@ -664,6 +663,21 @@
       <configuration name="ChangeTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ChangeTest - 2019.02.08 at 19h 21m 38s.xml">
+      <configuration name="ChangeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChangeTest - 2019.02.08 at 19h 22m 43s.xml">
+      <configuration name="ChangeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChangeTest - 2019.02.08 at 19h 23m 12s.xml">
+      <configuration name="ChangeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChangeTest - 2019.02.08 at 19h 33m 10s.xml">
+      <configuration name="ChangeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChangeTest - 2019.02.08 at 19h 36m 31s.xml">
+      <configuration name="ChangeTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ChangeTest - 2019.02.08 at 19h 44m 20s.xml">
       <configuration name="ChangeTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -706,27 +720,27 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Change.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/ChangeTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+        <state relative-caret-position="709">
+          <caret line="76" selection-start-line="76" selection-end-line="77" />
           <folding>
             <element signature="e#0#83#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Change.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="1" lean-forward="true" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
         </state>
       </provider>
     </entry>
