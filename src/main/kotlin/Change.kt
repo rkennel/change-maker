@@ -5,106 +5,57 @@ data class Change(
     val quarters: Int
 )
 
-
+enum class Coin(val valueInPennies:Int){
+    QUARTER(25),
+    DIME(10),
+    NICKEL(5),
+    PENNY(1),
+    NONE(0)
+}
 
 fun makeChange(changeToMake: Int): List<Change> {
-    return makeChangeAddQuarters(changeToMake, 0, 0, 0, 0)
+    return makeChangeAddCoins(changeToMake,0,0,0,0,Coin.QUARTER)
 }
 
-
-
-private fun makeChangeAddQuarters(
+private fun makeChangeAddCoins(
     changeToMake: Int,
     numberOfQuarters: Int,
     numberOfDimes: Int,
     numberOfNickels: Int,
-    numberOfPennies: Int
+    numberOfPennies: Int,
+    coin: Coin
 ): List<Change> {
     val changeCombinations = mutableListOf<Change>()
 
-    val numberOfPenniesInAQuarter = 25
-    val maxQuarters = changeToMake / numberOfPenniesInAQuarter;
+    val maxCoins = changeToMake / coin.valueInPennies;
 
-    for (i in 0..maxQuarters) {
-        val valueInQuarters = i * numberOfPenniesInAQuarter
-        changeCombinations.addAll(
-            makeChangeAddDimes(
-                changeToMake - valueInQuarters,
-                i,
-                numberOfDimes,
-                numberOfNickels,
-                numberOfPennies
-            )
-        )
+    for (i in 0..maxCoins) {
+
+        val q = if(coin==Coin.QUARTER) i else numberOfQuarters
+        val d = if(coin==Coin.DIME) i else numberOfDimes
+        val n = if(coin==Coin.NICKEL) i else numberOfNickels
+
+        val nextCoin = determineNextCoin(coin)
+
+        val valueInCoins = i * coin.valueInPennies
+        val remainingChangeToMake = changeToMake - valueInCoins
+
+        if(nextCoin==Coin.NONE){
+            changeCombinations.add(Change(remainingChangeToMake,n,d,q))
+        }
+        else{
+            changeCombinations.addAll(makeChangeAddCoins(remainingChangeToMake,q,d,n,numberOfPennies,nextCoin))
+        }
     }
 
     return changeCombinations
 }
 
-private fun makeChangeAddDimes(
-    changeToMake: Int,
-    numberOfQuarters: Int,
-    numberOfDimes: Int,
-    numberOfNickels: Int,
-    numberOfPennies: Int
-): List<Change> {
-    val changeCombinations = mutableListOf<Change>()
-
-    val numberOfPenniesInADime = 10
-    val maxDimes = changeToMake / numberOfPenniesInADime;
-
-    for (i in 0..maxDimes) {
-        val valueInDimes = i * numberOfPenniesInADime
-        changeCombinations.addAll(
-            makeChangeAddNickels(
-                changeToMake - valueInDimes,
-                numberOfQuarters,
-                i,
-                numberOfNickels,
-                numberOfPennies
-            )
-        )
+private fun determineNextCoin(coin: Coin): Coin {
+    return when (coin) {
+        Coin.QUARTER -> Coin.DIME
+        Coin.DIME -> Coin.NICKEL
+        else -> Coin.NONE
     }
-
-    return changeCombinations
-}
-
-private fun makeChangeAddNickels(
-    changeToMake: Int,
-    numberOfQuarters: Int,
-    numberOfDimes: Int,
-    numberOfNickels: Int,
-    numberOfPennies: Int
-): List<Change> {
-
-    val changeCombinations = mutableListOf<Change>()
-
-    val numberOfPenniesInANickel = 5
-    val maxNickels = changeToMake / numberOfPenniesInANickel;
-
-    for (i in 0..maxNickels) {
-        val valueInNickles = i * numberOfPenniesInANickel
-        changeCombinations.addAll(
-            makeChangeAddPennies(
-                changeToMake - valueInNickles,
-                numberOfQuarters,
-                numberOfDimes,
-                i,
-                numberOfPennies
-            )
-        )
-    }
-
-    return changeCombinations
-}
-
-private fun makeChangeAddPennies(
-    changeToMake: Int,
-    numberOfQuarters: Int,
-    numberOfDimes: Int,
-    numberOfNickels: Int,
-    numberOfPennies: Int
-): List<Change> {
-    return mutableListOf(Change(changeToMake, numberOfNickels, numberOfDimes, numberOfQuarters))
 }
 
